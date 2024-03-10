@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advice Generator</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        max-height: 100vh;
+        background-color: hsl(218, 23%, 16%);
+        color: #fff;
+        margin: 0 10px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: hsl(217, 19%, 24%);
+        height: 280px;
+        min-width: 300px;
+        max-width: 460px;
+        border-radius: 8px;
+        margin: 25vh auto;
+        padding: 30px 25px;
+        text-align: center;
+        font-family: Manrope;
+        font-weight: 800;
+      }
+      .pattern-diver {
+        background: transparent url(assets/pattern-divider-mobile.svg) no-repeat
+          center;
+        background-size: contain;
+        width: 100%;
+        height: 20px;
+      }
+      button {
+        width: 53px;
+        height: 53px;
+        border-radius: 50%;
+        background-color: hsl(150, 100%, 66%);
+        position: absolute;
+        bottom: -25px;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        box-shadow: 0px 0px 10px hsl(150, 100%, 66%);
+      }
+
+      @media (min-width: 768px) {
+        .pattern-diver {
+          background: transparent url(assets/pattern-divider-desktop.svg)
+            no-repeat center;
+          background-size: inherit;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <h3
+        style="font-size: 10px; color: hsl(150, 100%, 66%); letter-spacing: 2px"
+      >
+        ADVICE #<span class="advice-Number">??</span>
+      </h3>
+      <div
+        style="
+          display: grid;
+          place-content: center;
+          height: 175px;
+          padding: 10px;
+        "
+      >
+        <p class="advice" style="font-size: 20px">No advice, click for one</p>
+      </div>
+
+      <div class="pattern-diver"></div>
+      <button>
+        <img
+          src="assets/icon-dice.svg"
+          alt=""
+          style="vertical-align: middle; width: 19px; height: auto"
+        />
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
